@@ -1,0 +1,20 @@
+{
+  "basics": {
+    "name": "Ryland Donovan",
+    "label": "Developer",
+    "email": "RylandDonovan@gmail.com",
+    "url": "https://www.rylanddonovan.com",
+    "summary": "Experienced developer specialized in Typescript, C# and Kubernetes, with a focus on reliability and large datasets. 3 years of experience developing and implementing solutions to meet business needs. Skilled in designing and deploying scalable applications while ensuring performance and security. Proven ability to collaborate effectively with cross-functional teams to deliver high-quality software products.",
+    "location": {
+      "postalCode": "M6H 2T3",
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario"
+    },
+    "profiles": [{
+      "network": "Github",
+      "username": "RrylandD",
+      "url": "https://github.com/RrylandD"
+    }]
+  }
+}
