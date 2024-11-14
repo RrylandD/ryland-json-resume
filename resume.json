@@ -25,9 +25,9 @@
     "endDate": "2024-01-01",
     "summary": "Software Developer with the Digital Project Delivery team working on tools and services to enable engineers to deliver high quality results for clients.",
     "highlights": [
+      "Lead developer of AssetXD, a 3D model based engineering data visualizer and authoring tool based on Bentley Systems' Design Review",
       "Brought a proof of concept to a fully formed product",
-      "Facilitated organization-wide migration from Azure DevOps to GitHub and helped in developing code quality standards.",
-      "Lead developer of AssetXD, a 3D model based engineering data visualizer and authoring tool based on Bentley Systems' Design Review"
+      "Facilitated organization-wide migration from Azure DevOps to GitHub and helped in developing code quality standards."
     ]
   }],
   "education": [{
