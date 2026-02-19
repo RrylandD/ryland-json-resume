@@ -87,6 +87,13 @@
         "Migrated over 250 repositories from Azure DevOps to GitHub, ensuring minimal disruption to development workflows, maintaining code history and integrity throughout the process",
         "Developed documentation and guidelines for repository management, branching strategies, and pull request workflows to ensure consistency and maintain high code quality across all teams",
         "Provided training sessions and ongoing support to development teams during and after the migration, fostering a smooth transition and promoting best practices for using GitHub effectively"
+      ],
+      "keywords": [
+        "Azure DevOps",
+        "GitHub",
+        "Repository Migration",
+        "CI/CD Pipelines",
+        "DevOps"
       ]
     }
   ]
