@@ -4,40 +4,90 @@
     "label": "Developer",
     "email": "RylandDonovan@gmail.com",
     "url": "https://www.rylanddonovan.com",
-    "summary": "Experienced developer specialized in Typescript, C# and Kubernetes, with a focus on reliability and large datasets. 4 years of experience developing and implementing solutions to meet business needs. Skilled in designing and deploying scalable applications while ensuring performance and security. Proven ability to collaborate effectively with cross-functional teams to deliver high-quality software products.",
+    "summary": "Experienced developer specialized in Typescript, C# and Kubernetes, with a focus on reliability and large datasets. 5 years of experience developing and implementing solutions to meet business needs. Skilled in designing and deploying scalable applications while ensuring performance and security. Proven ability to collaborate effectively with cross-functional teams to deliver high-quality software products.",
     "location": {
       "postalCode": "M6H 2T3",
       "city": "Toronto",
       "countryCode": "CA",
       "region": "Ontario"
     },
-    "profiles": [{
-      "network": "Github",
-      "username": "RrylandD",
-      "url": "https://github.com/RrylandD"
-    }]
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "RrylandD",
+        "url": "https://github.com/RrylandD"
+      }
+    ]
   },
-  "work": [{
-    "name": "Hatch",
-    "position": "Software Developer",
-    "url": "https://www.hatch.com/",
-    "startDate": "2019-05-01",
-    "endDate": "2024-01-01",
-    "summary": "Software Developer with the Digital Project Delivery team working on tools and services to enable engineers to deliver high quality results for clients.",
-    "highlights": [
-      "Brought a proof of concept to a fully formed product",
-      "Facilitated organization-wide migration from DevOps to GitHub and helped in developing code quality standards."
-    ]
-  }],
-  "education": [{
-    "institution": "University of Guelph",
-    "url": "https://www.uoguelph.ca/",
-    "area": "Computer Science, Minor in Business",
-    "studyType": "Bachelor",
-    "startDate": "2015-09-07",
-    "endDate": "2020-06-09",
-    "score": "4.0",
-    "courses": [
-    ]
-  }]
+  "work": [
+    {
+      "name": "Hatch",
+      "position": "Software Developer",
+      "url": "https://www.hatch.com/Expertise/Topics/Digital-Project-Delivery-DPD",
+      "startDate": "2019-05-01",
+      "endDate": "2025-01-01",
+      "summary": "Software Developer with the Digital Project Delivery team working on tools and services to enable engineers to deliver high quality results for clients.",
+      "highlights": [
+        "Lead developer of a digital twin based engineering data visualization and authoring tool implementing Bentley Systems' Design Review",
+        "CI/CD: Github Actions, Azure DevOps pipelines for deploying .NET/Angular applications to Azure, publishing npm packages to private registries, publishing docker images, and more.",
+        "Mentored junior developers and provided guidance on best practices for software development.",
+        "Facilitated organization-wide migration from Azure DevOps repos to GitHub and helped in developing code quality and workflow standards."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Guelph",
+      "url": "https://www.uoguelph.ca/",
+      "area": "Computer Science, Minor in Business",
+      "studyType": "Bachelor",
+      "startDate": "2015-09-07",
+      "endDate": "2020-06-09",
+      "score": "4.0",
+      "courses": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "Digital Engineering Platform",
+      "url": "https://www.hatch.com/Expertise/Topics/Digital-Project-Delivery-DPD",
+      "description": "A digital twin based engineering data visualizer and authoring tool based implementing Bentley Systems' Design Review",
+      "highlights": [
+        "Lead developer responsible for technical design and implementation of the application, including development of core features, integration with backend services, and deployment to Azure",
+        "Brought a proof of concept to a fully formed product"
+      ],
+      "keywords": [
+        "Angular",
+        "C#",
+        "Azure Functions",
+        "Digital Twin",
+        "Engineering Data Visualization"
+      ]
+    },
+    {
+      "name": "iTwin Sync Function",
+      "description": "A TypeScript function that consumes engineering data from RESTful APIs and writes that data as native elements to Digital Twins for visualization",
+      "highlights": [
+        "TypeScript function deployed as containerized Docker image on Kubernetes cluster with KEDA-based auto-scaling triggered by queue messages",
+        "Consumes engineering project data from RESTful APIs and transforms it into native elements for engineering deliverables",
+        "Queue-driven job execution model that formats and associates retrieved data with existing deliverables, enabling field-level data access and visualization through native viewers"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "KEDA",
+        "Engineering Data Visualization"
+      ]
+    },
+    {
+      "name": "Azure DevOps to GitHub Migration",
+      "description": "Facilitated organization-wide migration from Azure DevOps repos to GitHub and helped in developing code quality and workflow standards.",
+      "highlights": [
+        "Migrated over 250 repositories from Azure DevOps to GitHub, ensuring minimal disruption to development workflows, maintaining code history and integrity throughout the process",
+        "Developed documentation and guidelines for repository management, branching strategies, and pull request workflows to ensure consistency and maintain high code quality across all teams",
+        "Provided training sessions and ongoing support to development teams during and after the migration, fostering a smooth transition and promoting best practices for using GitHub effectively"
+      ]
+    }
+  ]
 }
