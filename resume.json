@@ -31,7 +31,8 @@
         "Lead developer of a digital twin based engineering data visualization and authoring tool implementing Bentley Systems' Design Review",
         "CI/CD: Github Actions, Azure DevOps pipelines for deploying .NET/Angular applications to Azure, publishing npm packages to private registries, publishing docker images, and more.",
         "Mentored junior developers and provided guidance on best practices for software development.",
-        "Facilitated organization-wide migration from Azure DevOps repos to GitHub and helped in developing code quality and workflow standards."
+        "Facilitated organization-wide migration from Azure DevOps repos to GitHub and helped in developing code quality and workflow standards.",
+        "Onboarded additional business units to GitHub, delivering training and enforcing Git best practices (branching strategy, PR workflows, and code review standards)."
       ]
     }
   ],
