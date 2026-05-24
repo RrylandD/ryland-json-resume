@@ -99,13 +99,15 @@
     },
     {
       "name": "GitHub Enterprise Billing Notifications",
-      "description": "Replaced limited GitHub cost-center reporting with an API-driven pipeline that generates custom date-range, per-organization cost summaries and notifies stakeholders monthly via Azure Event Grid.",
+      "description": "Replaced limited GitHub cost-center reporting with a configurable API-driven pipeline that pulls custom date-range billing data and publishes per-organization and per-user cost summaries to notify stakeholders monthly via Azure Event Grid.",
       "highlights": [
-        "Improved spend visibility and accountability with scheduled, org-level cost summaries delivered to named owners"
+        "Workflow inputs configure which organizations to include, which users to report on, cost codes for attribution, and recipients for each notification",
+        "Generates org-level and per-user cost summaries so spend can be reviewed at both team and individual contributor levels",
+        "Improved spend visibility and accountability with scheduled summaries delivered monthly to configured stakeholders"
       ],
       "keywords": [
         "GitHub Actions",
-        "Azure Event Grid"        
+        "Azure Event Grid"
       ]
     }
   ]
