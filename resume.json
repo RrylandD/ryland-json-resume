@@ -29,7 +29,7 @@
       "summary": "Software Developer with the Digital Project Delivery team working on tools and services to enable engineers to deliver high quality results for clients.",
       "highlights": [
         "Lead developer of a digital twin based engineering data visualization and authoring tool implementing Bentley Systems' Design Review",
-        "CI/CD: Github Actions, Azure DevOps pipelines for deploying .NET/Angular applications to Azure, publishing npm packages to private registries, publishing docker images, and more.",
+        "CI/CD: Github Actions, Azure DevOps pipelines for deploying ASP.NET Core/Angular applications to Azure, publishing npm packages to private registries for internal use, publishing docker images, and more.",
         "Mentored junior developers and provided guidance on best practices for software development.",
         "Facilitated organization-wide migration from Azure DevOps repos to GitHub and helped in developing code quality and workflow standards.",
         "Onboarded additional business units to GitHub, delivering training and enforcing Git best practices (branching strategy, PR workflows, and code review standards)."
@@ -52,17 +52,19 @@
     {
       "name": "Digital Engineering Platform",
       "url": "https://www.hatch.com/Expertise/Topics/Digital-Project-Delivery-DPD",
-      "description": "A digital twin based engineering data visualizer and authoring tool based implementing Bentley Systems' Design Review",
+      "description": "An enterprise connected data visualization and design review platform built for Hatch's Digital Project Delivery (DPD) ecosystem. Integrates Bentley's iTwin platform for 3D iModel viewing, work package coordination, and digital twin enablement — deployed on Azure and embedded in SharePoint for engineering teams across a variety of sectors.",
       "highlights": [
-        "Lead developer responsible for technical design and implementation of the application, including development of core features, integration with backend services, and deployment to Azure",
-        "Brought a proof of concept to a fully formed product"
+        "Lead developer responsible for technical design and implementation of the application, including development of core features, integration with backend services, and CI/CD pipeline setup for automated testing and deployment",
+        "Led full-stack technical design and delivery as the primary developer, driving the product from proof of concept to a production-grade, multi-environment enterprise application",
+        "Architected end-to-end integrations with Bentley iTwin, Azure Functions, and Kubernetes alongside enterprise project management platforms",
+        "Built an ECSQL-based query engine for dynamic 3D model element filtering and visualization to power interactive design review workflows"
       ],
       "keywords": [
         "Angular",
-        "C#",
+        "ASP.NET Core",
         "Azure Functions",
-        "Digital Twin",
-        "Engineering Data Visualization"
+        "Kubernetes",
+        "iTwin.js"
       ]
     },
     {
@@ -79,6 +81,23 @@
         "Kubernetes",
         "KEDA",
         "Engineering Data Visualization"
+      ]
+    },
+    {
+      "name": "iTwin Descriptor Preprocessor",
+      "description": "A TypeScript service that listens for iModel change events and generates presentation descriptors from iTwin digital twin data, persisting the output to Azure Blob Storage for downstream consumption",
+      "highlights": [
+        "Hybrid runtime: Azure Function ingests iModel change events via Event Grid and forwards them to Azure Service Bus; a Kubernetes worker consumes sessions and generates presentation descriptors",
+        "Containerized worker deployed on AKS with KEDA auto-scaling triggered by Service Bus queue depth",
+        "Connects to the iTwin platform to open iModel checkpoints, extract geometric descriptors, and write them to Blob Storage.",
+        "Resilient processing with exponential-backoff retry scheduling, permanent-failure dead-lettering, and per-session locking"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Docker",
+        "Kubernetes",
+        "Azure Service Bus",
+        "iTwin.js"
       ]
     },
     {
