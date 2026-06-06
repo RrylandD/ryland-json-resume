@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Ryland Donovan",
-    "label": "Developer",
+    "label": "Software Developer",
     "email": "RylandDonovan@gmail.com",
     "url": "https://www.rylanddonovan.com",
     "summary": "Experienced developer specialized in Typescript, ASP.NET Core and Kubernetes, with a focus on reliability and large-scale engineering data. 6 years of professional experience developing and implementing solutions to meet business needs. Skilled in designing and deploying scalable applications while ensuring performance and security. Proven ability to collaborate effectively with cross-functional teams to deliver high-quality software products. Experience at a professional engineering firm building reliable software for complex engineering data and solving problems across engineering disciplines for multidisciplinary project teams.",
@@ -127,6 +127,55 @@
       "keywords": [
         "GitHub Actions",
         "Azure Event Grid"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "TypeScript",
+        "C#",
+        "JavaScript",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Frameworks & Platforms",
+      "keywords": [
+        "ASP.NET Core",
+        "Angular",
+        "iTwin.js",
+        "Azure Functions",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": "Cloud & Infrastructure",
+      "keywords": [
+        "Azure (AKS, Service Bus, Event Grid, Blob Storage)",
+        "Kubernetes",
+        "Docker",
+        "KEDA"
+      ]
+    },
+    {
+      "name": "DevOps & Tooling",
+      "keywords": [
+        "GitHub Actions",
+        "Azure DevOps",
+        "CI/CD",
+        "Git",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Domain",
+      "keywords": [
+        "Digital Twin",
+        "Engineering Data Visualization",
+        "3D Model Viewing",
+        "Enterprise Integration"
       ]
     }
   ]
