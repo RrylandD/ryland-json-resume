@@ -122,7 +122,8 @@
       "highlights": [
         "Workflow inputs configure which organizations to include, which users to report on, cost codes for attribution, and recipients for each notification",
         "Generates org-level and per-user cost summaries so spend can be reviewed at both team and individual contributor levels",
-        "Improved spend visibility and accountability with scheduled summaries delivered monthly to configured stakeholders"
+        "Improved spend visibility and accountability with scheduled summaries delivered monthly to configured stakeholders",
+        "Identified discrepancies between GitHub’s UI cost attribution and actual seat assignments when users held seats in one organization but usage was billed to another with a different license tier"
       ],
       "keywords": [
         "GitHub Actions",
