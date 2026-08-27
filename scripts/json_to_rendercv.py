@@ -122,13 +122,8 @@ def build_education(education: list[dict[str, Any]] | None) -> list[dict[str, An
             entry["end_date"] = end_date
         if item.get("location"):
             entry["location"] = item["location"]
-        summary_parts: list[str] = []
         if item.get("summary"):
-            summary_parts.append(str(item["summary"]))
-        if item.get("score"):
-            summary_parts.append(f"GPA {item['score']}")
-        if summary_parts:
-            entry["summary"] = ". ".join(summary_parts)
+            entry["summary"] = str(item["summary"])
         highlights: list[str] = []
         if item.get("courses"):
             highlights.extend(item["courses"])
