@@ -12,6 +12,11 @@
     },
     "profiles": [
       {
+        "network": "LinkedIn",
+        "username": "ryland-donovan-741952b7",
+        "url": "https://www.linkedin.com/in/ryland-donovan-741952b7/"
+      },
+      {
         "network": "Github",
         "username": "RrylandD",
         "url": "https://github.com/RrylandD"
