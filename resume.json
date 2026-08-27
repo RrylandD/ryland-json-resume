@@ -4,7 +4,7 @@
     "label": "Full-Stack Developer",
     "email": "RylandDonovan@gmail.com",
     "url": "https://www.rylanddonovan.com",
-    "summary": "Full-stack developer, 6 years at Hatch. Took an internal engineering platform from prototype to production and own it end to end: Angular and TypeScript on the front end, ASP.NET Core APIs, and event-driven services on Kubernetes.",
+    "summary": "Full-stack developer, 6 years at Hatch. Took an internal engineering platform from prototype to production and own it end to end: Angular on the front end, ASP.NET Core APIs, and event-driven services on Kubernetes.",
     "location": {
       "city": "Toronto",
       "countryCode": "CA",
@@ -61,7 +61,6 @@
       ],
       "keywords": [
         "Angular",
-        "TypeScript",
         "ASP.NET Core",
         "Azure"
       ]
@@ -88,7 +87,6 @@
       "keywords": [
         "TypeScript",
         "C#",
-        "JavaScript",
         "SQL"
       ]
     },
