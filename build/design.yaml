@@ -6,6 +6,17 @@ design:
     left_margin: 0.5in
     right_margin: 0.5in
     show_footer: false
+  typography:
+    font_size:
+      name: 22pt
+  header:
+    space_below_name: 0.3cm
+    space_below_headline: 0.25cm
+    connections:
+      display_urls_instead_of_usernames: true
+      separator: " · "
+      space_between_connections: 0.12cm
+      show_icons: false
 
 locale:
   language: english

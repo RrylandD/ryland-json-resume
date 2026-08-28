@@ -43,19 +43,34 @@ def normalize_date(value: str | None) -> str | None:
     return normalized
 
 
+REGION_ABBREVIATIONS = {
+    "ontario": "ON",
+}
+
+
 def format_location(location: dict[str, Any] | None) -> str | None:
     if not location:
         return None
     parts: list[str] = []
-    for key in ("city", "region", "countryCode"):
-        value = location.get(key)
-        if value:
-            parts.append(str(value))
+    city = location.get("city")
+    region = location.get("region")
+    country = location.get("countryCode")
+    if city:
+        parts.append(str(city))
+    if region:
+        abbreviated = REGION_ABBREVIATIONS.get(str(region).strip().lower(), str(region))
+        parts.append(abbreviated)
+    elif country:
+        parts.append(str(country))
     return ", ".join(parts) if parts else None
 
 
 def normalize_network(network: str) -> str:
     return NETWORK_ALIASES.get(network.strip().lower(), network.strip())
+
+
+# LinkedIn stays in resume.json for the site; omit it from the PDF header.
+PDF_OMITTED_NETWORKS = {"linkedin"}
 
 
 def build_social_networks(profiles: list[dict[str, Any]] | None) -> list[dict[str, str]]:
@@ -67,9 +82,12 @@ def build_social_networks(profiles: list[dict[str, Any]] | None) -> list[dict[st
         username = profile.get("username")
         if not username:
             continue
+        network = normalize_network(profile.get("network", ""))
+        if network.strip().lower() in PDF_OMITTED_NETWORKS:
+            continue
         social_networks.append(
             {
-                "network": normalize_network(profile.get("network", "")),
+                "network": network,
                 "username": username,
             }
         )
@@ -207,16 +225,16 @@ def build_cv(resume: dict[str, Any]) -> dict[str, Any]:
         cv["name"] = basics["name"]
     if basics.get("label"):
         cv["headline"] = basics["label"]
+
+    location = format_location(basics.get("location"))
+    if location:
+        cv["location"] = location
     if basics.get("email"):
         cv["email"] = basics["email"]
     if basics.get("phone"):
         cv["phone"] = basics["phone"]
     if basics.get("url"):
         cv["website"] = basics["url"]
-
-    location = format_location(basics.get("location"))
-    if location:
-        cv["location"] = location
 
     social_networks = build_social_networks(basics.get("profiles"))
     if social_networks:
