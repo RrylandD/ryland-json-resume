@@ -4,7 +4,7 @@
     "label": "Full-Stack Developer",
     "email": "RylandDonovan@gmail.com",
     "url": "https://www.rylanddonovan.com",
-    "summary": "Full-stack developer, 6 years at Hatch. Took an internal engineering platform from prototype to production and own it end to end: Angular on the front end, ASP.NET Core APIs, and event-driven services on Kubernetes.",
+    "summary": "Full-stack developer, 6 years at Hatch. Took an internal engineering platform from prototype to production and own it end to end. Angular on the frontend, ASP.NET Core APIs and event-driven services on Kubernetes used by hundreds of engineers.",
     "location": {
       "city": "Toronto",
       "countryCode": "CA",
@@ -17,7 +17,7 @@
         "url": "https://www.linkedin.com/in/ryland-donovan-741952b7/"
       },
       {
-        "network": "Github",
+        "network": "GitHub",
         "username": "RrylandD",
         "url": "https://github.com/RrylandD"
       }
@@ -29,13 +29,13 @@
       "position": "Full-Stack Developer",
       "url": "https://www.hatch.com/Expertise/Topics/Digital-Project-Delivery-DPD",
       "startDate": "2019-05-01",
-      "summary": "Digital Project Delivery, the internal software group at a global engineering and consulting firm",
+      "summary": "Digital Project Delivery, the internal software group at a global engineering and consulting firm. Co-op, then junior developer, then developer.",
       "highlights": [
-        "Lead developer on the Digital Engineering Platform and the services behind it, from prototype to production. Own architecture, code review, and releases. Used by hundreds of engineers across dozens of live projects.",
+        "Lead developer on the Digital Engineering Platform and the services behind it, from prototype to production. Own architecture, code review, releases, and production support. Used by hundreds of engineers across dozens of live projects.",
         "Own the CI/CD pipelines in GitHub Actions and Azure DevOps: automated tests, container builds, and deploys.",
         "Migrated 250 repositories and 200 developers from Azure DevOps to GitHub with full history and LFS artifacts intact, then set the org-wide branching and pull request standards.",
         "Built GitHub Enterprise spend reporting mapped to internal cost codes, surfacing seats billed to the wrong organization and licence tier.",
-        "Mentor interns and junior developers, enforcing development standards and best practices."
+        "Mentor interns and junior developers through code review and shared engineering standards."
       ]
     }
   ],
@@ -53,8 +53,15 @@
   "projects": [
     {
       "name": "Digital Engineering Platform",
+      "slug": "digital-engineering-platform",
       "url": "https://www.hatch.com/Expertise/Topics/Digital-Project-Delivery-DPD",
+      "urlLabel": "About Hatch Digital Project Delivery",
       "description": "Web app for reviewing 3D models of industrial projects and assigning engineering data to model elements.",
+      "roles": [
+        "Lead developer"
+      ],
+      "entity": "Hatch",
+      "type": "application",
       "highlights": [
         "Built the filtering layer that compiles UI filter state into ECSQL queries against the model database, letting users select and colour 3D elements by any engineering property.",
         "Integrated Bentley iTwin for model viewing with the enterprise systems that own the source engineering data."
@@ -63,11 +70,39 @@
         "Angular",
         "ASP.NET Core",
         "Azure"
-      ]
+      ],
+      "caseStudy": {
+        "problem": "Review 3D models of industrial projects and assign engineering data to model elements.",
+        "users": "Hundreds of engineers across dozens of live projects.",
+        "ownership": "Lead developer from prototype to production: architecture, code review, and releases.",
+        "constraint": "Bentley iTwin is a third-party viewer. The engineering data is Hatch's. The same app had to join the two and run across many projects.",
+        "architecture": "Angular UI and ASP.NET Core APIs, with Bentley iTwin for model viewing and Azure for hosting.",
+        "architectureSteps": [
+          "Angular UI",
+          "ASP.NET Core APIs",
+          "Bentley iTwin and ECSQL model database",
+          "Enterprise engineering systems"
+        ],
+        "sections": [
+          {
+            "heading": "Approach",
+            "highlights": [
+              "Built the filtering layer that compiles UI filter state into ECSQL queries against the model database, letting users select and colour 3D elements by any engineering property.",
+              "Integrated Bentley iTwin for model viewing with the enterprise systems that own the source engineering data."
+            ]
+          }
+        ]
+      }
     },
     {
       "name": "Model Sync Pipeline",
+      "slug": "model-sync-pipeline",
       "description": "Two background services: one writes engineering data into 3D models, the other precomputes model descriptors to Blob Storage for the app to read.",
+      "roles": [
+        "Lead developer"
+      ],
+      "entity": "Hatch",
+      "type": "application",
       "highlights": [
         "Azure Functions publish model change events onto Service Bus; Kubernetes workers consume the queue and scale on queue depth with KEDA.",
         "Explicit failure handling: exponential backoff, dead-lettering for permanent failures, and per-session locking so concurrent jobs cannot collide on one model.",
@@ -78,7 +113,28 @@
         "Kubernetes",
         "KEDA",
         "Azure Service Bus"
-      ]
+      ],
+      "caseStudy": {
+        "problem": "Keep 3D models in sync with source engineering data. One worker writes that data into models as native elements; another precomputes descriptors to Blob Storage for the app.",
+        "users": "Supports the Digital Engineering Platform used by hundreds of engineers across dozens of live projects.",
+        "ownership": "Lead developer on the services behind the Digital Engineering Platform.",
+        "constraint": "Had to scale across projects without corrupting model data. Concurrent jobs cannot write the same model at once.",
+        "architecture": "Azure Functions publish model change events onto Service Bus. Kubernetes workers consume the queue and scale on queue depth with KEDA.",
+        "architectureSteps": [
+          "Azure Functions",
+          "Azure Service Bus",
+          "KEDA-scaled Kubernetes workers",
+          "3D models and Blob Storage"
+        ],
+        "sections": [
+          {
+            "heading": "Reliability",
+            "highlights": [
+              "Exponential backoff for transient failures, dead-lettering for permanent failures, and per-session locking so concurrent jobs cannot collide on one model."
+            ]
+          }
+        ]
+      }
     }
   ],
   "skills": [
@@ -103,6 +159,7 @@
       "keywords": [
         "ASP.NET Core",
         "REST APIs",
+        "Event-driven services",
         "Azure Functions",
         "Entity Framework",
         "SQL Server"
@@ -121,6 +178,8 @@
       "name": "Practices",
       "keywords": [
         "CI/CD",
+        "GitHub Actions",
+        "Azure DevOps",
         "Automated testing",
         "Code review",
         "Production support"
